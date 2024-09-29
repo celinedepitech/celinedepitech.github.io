@@ -97,7 +97,6 @@ h1 {
   color: white;
 }
 
-/* For very small screens */
 @media screen and (max-width: 400px) {
   .download-button a {
     font-size: 15px;
@@ -110,7 +109,6 @@ h1 {
   }
 }
 
-/* For larger screens */
 @media screen and (min-width: 768px) {
   .download-button a {
     font-size: 2rem;
@@ -232,7 +230,6 @@ h1 {
     width: 100%; /* Ensure equal sizing */
   }
 
-  /* Ensure the logos and other logos containers take up space in the flex layout */
   .logos-container,
   .other-logos-container {
     width: 45%;
@@ -259,6 +256,12 @@ h1 {
 .epitech-logo img {
   width: 70%;
   margin: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .epitech-logo img {
+    max-width: 40%;
+  }
 }
 /*TRAINING*/
 
@@ -319,6 +322,12 @@ h1 {
 .conan iframe {
   width: 100%;
   margin: 20px auto;
+}
+
+@media screen and (min-width: 768px) {
+  .hobbies-container img {
+    max-width: 20%;
+  }
 }
 /*HOBBIES*/
 
