@@ -1,0 +1,400 @@
+/*Global*/
+:root {
+  /*colors*/
+  --main-color: rgb(200, 200, 200);
+  --hover-color: rgb(120, 120, 120);
+  --background-color: white;
+  --text-color: rgb(40, 40, 40);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  /*NE PAS EFFACER*/
+  margin: 0;
+  padding: 0;
+  /*NE PAS EFFACER*/
+  /* border: 2px solid red; */
+}
+
+.border {
+  border-bottom: 5px solid grey;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+section {
+  padding: 20px 20px;
+}
+/*Global*/
+
+/*Typography*/
+body {
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 1.2rem;
+  background-color: var(--background-color);
+}
+
+h1 {
+  font-size: 3rem;
+}
+/*Typography*/
+
+/*NAVBAR*/
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  background-color: var(--main-color);
+  padding: 0;
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text-color);
+  display: block;
+}
+
+.navbar a:hover {
+  color: white;
+}
+/*NAVBAR*/
+
+/*HEADER*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.header-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.download-button a {
+  text-decoration: none;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 150px;
+  min-width: 80px;
+  transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+.download-button a:hover {
+  background-color: var(--hover-color);
+  color: white;
+}
+
+/* For very small screens */
+@media screen and (max-width: 400px) {
+  .download-button a {
+    font-size: 15px;
+    padding: 2px;
+    max-width: 80px;
+  }
+
+  .header-titles {
+    font-size: 0.5rem;
+  }
+}
+
+/* For larger screens */
+@media screen and (min-width: 768px) {
+  .download-button a {
+    font-size: 2rem;
+    padding: 12px 24px;
+    max-width: 200px;
+  }
+}
+/*HEADER*/
+
+/*ABOUT ME SECTION*/
+.about-me-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-me-section p {
+  padding: 10px 10px;
+}
+
+.image-container {
+  padding: 10px 0;
+}
+
+.socials-link a {
+  margin-right: 50px;
+}
+
+.socials-link a:last-child {
+  margin-right: 0;
+}
+/*ABOUT ME SECTION*/
+
+/*PORTFOLIO*/
+.portfolio-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.portfolio-section img {
+  width: 80%;
+  padding: 3px;
+  margin: 5px;
+  border-radius: 20px;
+  border: 2px solid var(--main-color);
+}
+
+.random-screen:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 600px) {
+  .portfolio-section img {
+    max-width: 380px;
+  }
+}
+/*PORTFOLIO*/
+
+/*SKILLS*/
+.skills-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-section h3 {
+  text-decoration: underline;
+}
+
+/*web dev*/
+.logos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.logos div {
+  text-align: center;
+  width: 100px;
+}
+
+.logos img {
+  height: 80px;
+  width: 80px;
+}
+
+/*other*/
+.other-logos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.other-logos img {
+  height: 70px;
+  width: 70px;
+}
+
+.sweden-logo img {
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .skills-section > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .logos,
+  .other-logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%; /* Ensure equal sizing */
+  }
+
+  /* Ensure the logos and other logos containers take up space in the flex layout */
+  .logos-container,
+  .other-logos-container {
+    width: 45%;
+    margin: 50px;
+  }
+
+  .logos div,
+  .other-logos div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/*SKILLS*/
+
+/*TRAINING*/
+.training {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.epitech-logo img {
+  width: 70%;
+  margin: 10px;
+}
+/*TRAINING*/
+
+/*EXPERIENCE*/
+.experience h1 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.jobs {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.jobs h3 {
+  text-decoration: underline;
+}
+/*EXPERIENCE*/
+
+/*HOBBIES*/
+.hobbies h1 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.hobbies-container {
+  padding: 10px;
+}
+
+.hobbies-container img {
+  width: 20%;
+  height: 20%;
+}
+
+.tennis,
+.video-games {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.hobbies h2 {
+  text-align: center;
+}
+
+.conan {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.conan iframe {
+  width: 100%;
+  margin: 20px auto;
+}
+/*HOBBIES*/
+
+/*FOOTER*/
+.footer {
+  padding: 40px 20px;
+}
+
+.footer h1 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.footer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer input,
+.footer textarea {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.footer textarea {
+  height: 150px;
+  resize: vertical;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer button {
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer button:hover {
+  background-color: var(--hover-color);
+  color: white;
+}
+/*FOOTER*/
+
+/*BACK TO TOP*/
+.back-to-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(80, 80, 80);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+}
+
+.back-to-top span {
+  color: white;
+  font-size: 1.5rem;
+  transition: 0.2s ease-out;
+}
+
+.back-to-top:hover {
+  background-color: rgb(100, 100, 100);
+}
+
+.back-to-top:hover span {
+  transform: translateY(-4px);
+}
+/*BACK TO TOP*/
