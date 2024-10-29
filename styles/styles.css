@@ -163,6 +163,10 @@ h1 {
   transform: scale(1.05);
 }
 
+.guess-my-number-img:hover {
+  transform: scale(1.05);
+}
+
 @media (min-width: 600px) {
   .portfolio-section img {
     max-width: 380px;
